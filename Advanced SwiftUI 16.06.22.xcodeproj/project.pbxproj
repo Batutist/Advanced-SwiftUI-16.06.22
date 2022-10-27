@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D2F1BED290B09F1008F4AC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D2F1BEC290B09F1008F4AC6 /* GoogleService-Info.plist */; };
+		3D2F1BF0290B10AC008F4AC6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F1BEF290B10AC008F4AC6 /* SettingsView.swift */; };
 		3D6CAF31285BB34600DB5782 /* Advanced_SwiftUI_16_06_22App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6CAF30285BB34600DB5782 /* Advanced_SwiftUI_16_06_22App.swift */; };
 		3D6CAF38285BB34700DB5782 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D6CAF37285BB34700DB5782 /* Preview Assets.xcassets */; };
 		3D6CAF3A285BB34700DB5782 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6CAF39285BB34700DB5782 /* Persistence.swift */; };
@@ -20,7 +22,6 @@
 		3D6CAF68285BB44700DB5782 /* TextfieldIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6CAF5F285BB44700DB5782 /* TextfieldIcon.swift */; };
 		3D6CAF69285BB44700DB5782 /* GradientButtonBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6CAF60285BB44700DB5782 /* GradientButtonBackground.swift */; };
 		3D6CAF6A285BB44700DB5782 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6CAF61285BB44700DB5782 /* Extensions.swift */; };
-		3D6CAF6C285BC67B00DB5782 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D6CAF6B285BC67A00DB5782 /* GoogleService-Info.plist */; };
 		3D6CAF6F285BC9AE00DB5782 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6CAF6E285BC9AE00DB5782 /* FirebaseAnalytics */; };
 		3D6CAF71285BC9AE00DB5782 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6CAF70285BC9AE00DB5782 /* FirebaseAnalyticsSwift */; };
 		3D6CAF73285BC9AE00DB5782 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6CAF72285BC9AE00DB5782 /* FirebaseAuth */; };
@@ -31,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D2F1BEC290B09F1008F4AC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3D2F1BEF290B10AC008F4AC6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3D6CAF2D285BB34600DB5782 /* Advanced SwiftUI 16.06.22.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Advanced SwiftUI 16.06.22.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6CAF30285BB34600DB5782 /* Advanced_SwiftUI_16_06_22App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advanced_SwiftUI_16_06_22App.swift; sourceTree = "<group>"; };
 		3D6CAF37285BB34700DB5782 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,7 +48,6 @@
 		3D6CAF5F285BB44700DB5782 /* TextfieldIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextfieldIcon.swift; sourceTree = "<group>"; };
 		3D6CAF60285BB44700DB5782 /* GradientButtonBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientButtonBackground.swift; sourceTree = "<group>"; };
 		3D6CAF61285BB44700DB5782 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		3D6CAF6B285BC67A00DB5782 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3D6CAF74285D036900DB5782 /* AlertInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertInfo.swift; sourceTree = "<group>"; };
 		3D6CAF76285D119200DB5782 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		3DCCB29328AACB8800D3960E /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
@@ -66,6 +68,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D2F1BEE290B101E008F4AC6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D6CAF5C285BB44700DB5782 /* SignUpCard.swift */,
+				3D6CAF76285D119200DB5782 /* ProfileView.swift */,
+				3D2F1BEF290B10AC008F4AC6 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		3D6CAF24285BB34600DB5782 = {
 			isa = PBXGroup;
 			children = (
@@ -87,15 +99,14 @@
 			children = (
 				3D6CAF30285BB34600DB5782 /* Advanced_SwiftUI_16_06_22App.swift */,
 				3D6CAF5A285BB44700DB5782 /* ContentView.swift */,
-				3D6CAF5C285BB44700DB5782 /* SignUpCard.swift */,
-				3D6CAF76285D119200DB5782 /* ProfileView.swift */,
+				3D2F1BEE290B101E008F4AC6 /* Views */,
 				3D6CAF5D285BB44700DB5782 /* ViewsCustom */,
 				3D6CAF57285BB44700DB5782 /* Helpers */,
 				3D6CAF61285BB44700DB5782 /* Extensions.swift */,
 				3D6CAF39285BB34700DB5782 /* Persistence.swift */,
 				3D6CAF5B285BB44700DB5782 /* Assets.xcassets */,
 				3D6CAF3B285BB34700DB5782 /* Advanced_SwiftUI_16_06_22.xcdatamodeld */,
-				3D6CAF6B285BC67A00DB5782 /* GoogleService-Info.plist */,
+				3D2F1BEC290B09F1008F4AC6 /* GoogleService-Info.plist */,
 				3D6CAF36285BB34700DB5782 /* Preview Content */,
 			);
 			path = "Advanced SwiftUI 16.06.22";
@@ -199,7 +210,7 @@
 			files = (
 				3D6CAF65285BB44700DB5782 /* Assets.xcassets in Resources */,
 				3D6CAF38285BB34700DB5782 /* Preview Assets.xcassets in Resources */,
-				3D6CAF6C285BC67B00DB5782 /* GoogleService-Info.plist in Resources */,
+				3D2F1BED290B09F1008F4AC6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +230,7 @@
 				3D6CAF68285BB44700DB5782 /* TextfieldIcon.swift in Sources */,
 				3DCCB29428AACB8800D3960E /* SignInWithAppleButton.swift in Sources */,
 				3D6CAF64285BB44700DB5782 /* ContentView.swift in Sources */,
+				3D2F1BF0290B10AC008F4AC6 /* SettingsView.swift in Sources */,
 				3D6CAF63285BB44700DB5782 /* ImagePicker.swift in Sources */,
 				3D6CAF31285BB34600DB5782 /* Advanced_SwiftUI_16_06_22App.swift in Sources */,
 				3D6CAF62285BB44700DB5782 /* VisualEffectBlur.swift in Sources */,

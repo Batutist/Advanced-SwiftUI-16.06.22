@@ -12,6 +12,7 @@ import FirebaseAuth
 struct ProfileView: View {
     
     @State private var alertInfo: AlertInfo?
+    @State private var showSettingsView: Bool = false
     @Environment(\.presentationMode) var presentationMode
 
     
@@ -23,6 +24,7 @@ struct ProfileView: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 24) {
+                
                 card
                 
                 logOutButton
@@ -31,6 +33,9 @@ struct ProfileView: View {
         .preferredColorScheme(.dark)
         .alert(item: $alertInfo) { info in
             Alert(title: Text(info.title), message: Text(info.message), dismissButton: .cancel())
+        }
+        .sheet(isPresented: $showSettingsView) {
+            SettingsView()
         }
     }
     
@@ -69,6 +74,7 @@ struct ProfileView: View {
                     // settings button
                     Button {
                         print("settings button pressed")
+                        showSettingsView.toggle()
                     } label: {
                         TextfieldIcon(isActive: .constant(true), icon: "gearshape.fill")
                     }
