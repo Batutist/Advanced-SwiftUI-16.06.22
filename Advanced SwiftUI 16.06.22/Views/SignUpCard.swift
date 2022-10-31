@@ -51,8 +51,8 @@ struct SignUpCard: View {
             card
         }
         .onAppear(
-//            email = ""
-//            password = ""
+            //            email = ""
+            //            password = ""
         )
         .fullScreenCover(isPresented: $showProfileView) {
             ProfileView()
@@ -75,13 +75,15 @@ struct SignUpCard: View {
                 // Email address textfield
                 emailTextField
                     .frame(height: 52)
-                    .background(Color("secondaryBackground")
-                        .opacity(0.8)
-                        .cornerRadius(16))
                     .overlay(
                         RoundedRectangle(cornerRadius: 16, style: .continuous)
                             .stroke(Color.white, lineWidth: 1)
-                            .blendMode(.overlay))
+                            .blendMode(.overlay)
+                    )
+                    .background(
+                        Color("secondaryBackground")
+                            .opacity(0.8)
+                            .cornerRadius(16))
                 
                 // Password textfield
                 passwordTextField

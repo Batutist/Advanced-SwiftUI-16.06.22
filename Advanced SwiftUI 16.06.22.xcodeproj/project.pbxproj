@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D2F1BED290B09F1008F4AC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D2F1BEC290B09F1008F4AC6 /* GoogleService-Info.plist */; };
 		3D2F1BF0290B10AC008F4AC6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F1BEF290B10AC008F4AC6 /* SettingsView.swift */; };
+		3D2F1BF229104801008F4AC6 /* GradientTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2F1BF129104801008F4AC6 /* GradientTextfield.swift */; };
 		3D6CAF31285BB34600DB5782 /* Advanced_SwiftUI_16_06_22App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6CAF30285BB34600DB5782 /* Advanced_SwiftUI_16_06_22App.swift */; };
 		3D6CAF38285BB34700DB5782 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D6CAF37285BB34700DB5782 /* Preview Assets.xcassets */; };
 		3D6CAF3A285BB34700DB5782 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6CAF39285BB34700DB5782 /* Persistence.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		3D2F1BEC290B09F1008F4AC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3D2F1BEF290B10AC008F4AC6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3D2F1BF129104801008F4AC6 /* GradientTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTextfield.swift; sourceTree = "<group>"; };
 		3D6CAF2D285BB34600DB5782 /* Advanced SwiftUI 16.06.22.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Advanced SwiftUI 16.06.22.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6CAF30285BB34600DB5782 /* Advanced_SwiftUI_16_06_22App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advanced_SwiftUI_16_06_22App.swift; sourceTree = "<group>"; };
 		3D6CAF37285BB34700DB5782 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				3D6CAF60285BB44700DB5782 /* GradientButtonBackground.swift */,
 				3DCCB29328AACB8800D3960E /* SignInWithAppleButton.swift */,
 				3DD2C49328C0063400488AB2 /* GradientProfilePictureView.swift */,
+				3D2F1BF129104801008F4AC6 /* GradientTextfield.swift */,
 			);
 			path = ViewsCustom;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D6CAF67285BB44700DB5782 /* GradientText.swift in Sources */,
+				3D2F1BF229104801008F4AC6 /* GradientTextfield.swift in Sources */,
 				3D6CAF77285D119200DB5782 /* ProfileView.swift in Sources */,
 				3DD2C49428C0063400488AB2 /* GradientProfilePictureView.swift in Sources */,
 				3D6CAF3D285BB34700DB5782 /* Advanced_SwiftUI_16_06_22.xcdatamodeld in Sources */,
