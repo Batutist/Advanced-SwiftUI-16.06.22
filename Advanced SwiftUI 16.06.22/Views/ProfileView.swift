@@ -54,7 +54,7 @@ struct ProfileView: View {
 //                    }
 //                    .frame(width: 66, height: 66, alignment: .center)
                     
-                    GradientProfilePictureView(profilePicture: UIImage(named: "Profile")!)
+                    GradientProfilePictureView(profilePicture: UIImage(named: "myPhoto")!)
                         .frame(width: 66, height: 66, alignment: .center)
                     
                     // User name

@@ -46,6 +46,6 @@ struct GradientProfilePictureView: View {
 
 struct GradientProfilePictureView_Previews: PreviewProvider {
     static var previews: some View {
-        GradientProfilePictureView(profilePicture: UIImage(named: "Profile")!)
+        GradientProfilePictureView(profilePicture: UIImage(named: "myPhoto")!)
     }
 }
