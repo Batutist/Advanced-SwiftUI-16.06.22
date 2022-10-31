@@ -31,15 +31,32 @@ struct SettingsView: View {
         ZStack {
             Color("settingsBackground")
                 .ignoresSafeArea()
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 16) {
                 Text("Settings")
                     .font(.largeTitle).bold()
                     .foregroundColor(.white)
                 
                 Text("Manage your Design+Code profile and account")
-                    .font(.subheadline)
-                    
+                    .font(.subheadline).opacity(0.7)
+                
+                
+                GradientTextfield(isTextfieldActive: $isEditingNameTextfield, textfieldIconBounce: $nameIconBounce, text: $name, textfieldIcon: "textformat.alt", textPlaceHolder: "Your name")
+                
+                GradientTextfield(isTextfieldActive: $isEditingTwitterTextfield, textfieldIconBounce: $twitterIconBounce, text: $twitter, textfieldIcon: "scribble", textPlaceHolder: "Twitter profile")
+                
+                GradientTextfield(isTextfieldActive: $isEditingSiteTextfield, textfieldIconBounce: $siteIconBounce, text: $site, textfieldIcon: "link", textPlaceHolder: "Your personal website")
+                
+                GradientTextfield(isTextfieldActive: $isEditingBioTextfield, textfieldIconBounce: $bioIconBounce, text: $bio, textfieldIcon: "text.justify.leading", textPlaceHolder: "Write about yourself")
+                
+                GradientButtonBackground(buttonText: "Save Settings") {
+                    print("save changes made by the user")
+                }
+                
+                Spacer()
             }
+            .frame(maxHeight: .infinity)
+            .padding(.horizontal, 20)
+            .padding(.top, 20)
         }
         .preferredColorScheme(.dark)
     }
