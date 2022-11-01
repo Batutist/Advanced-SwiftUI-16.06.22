@@ -24,6 +24,9 @@ struct SettingsView: View {
     @State private var site = ""
     @State private var bio = ""
     
+    @State private var showImagePicker = false
+    @State private var inputImage: UIImage?
+    
     private let generator = UISelectionFeedbackGenerator()
     
     var body: some View {
@@ -39,17 +42,56 @@ struct SettingsView: View {
                 Text("Manage your Design+Code profile and account")
                     .font(.subheadline).opacity(0.7)
                 
+                // Button for change account image
+                Button {
+#warning("Open user's photo library")
+                    showImagePicker.toggle()
+                } label: {
+                    
+                    HStack(spacing: 12) {
+                        TextfieldIcon(isActive: .constant(false), icon: "person.crop.circle", passedImage: $inputImage)
+                            .padding(.leading, 8)
+                        
+                        GradientText(text: "Choose photo from library")
+                        
+                        Spacer()
+                    }
+                }
+                .overlay {
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(.white.opacity(0.1), lineWidth: 1)
+                }
+                .background(Color("textfieldBackground").cornerRadius(16))
                 
+                // Name Textfield
                 GradientTextfield(isTextfieldActive: $isEditingNameTextfield, textfieldIconBounce: $nameIconBounce, text: $name, textfieldIcon: "textformat.alt", textPlaceHolder: "Your name")
+                    .textInputAutocapitalization(.words)
+                    .textContentType(.name)
+                    .autocorrectionDisabled(true)
                 
-                GradientTextfield(isTextfieldActive: $isEditingTwitterTextfield, textfieldIconBounce: $twitterIconBounce, text: $twitter, textfieldIcon: "scribble", textPlaceHolder: "Twitter profile")
+                // Twitter account Textfield
+                GradientTextfield(isTextfieldActive: $isEditingTwitterTextfield, textfieldIconBounce: $twitterIconBounce, text: $twitter, textfieldIcon: "at", textPlaceHolder: "Twitter profile")
+                    .textInputAutocapitalization(.none)
+                    .keyboardType(.twitter)
+                    .autocorrectionDisabled(true)
                 
+                
+                // Personal website Textfield
                 GradientTextfield(isTextfieldActive: $isEditingSiteTextfield, textfieldIconBounce: $siteIconBounce, text: $site, textfieldIcon: "link", textPlaceHolder: "Your personal website")
+                    .textInputAutocapitalization(.none)
+                    .keyboardType(.webSearch)
+                    .autocorrectionDisabled(true)
                 
+                // Account description Textfield
                 GradientTextfield(isTextfieldActive: $isEditingBioTextfield, textfieldIconBounce: $bioIconBounce, text: $bio, textfieldIcon: "text.justify.leading", textPlaceHolder: "Write about yourself")
+                    .textInputAutocapitalization(.sentences)
+                    .keyboardType(.default)
                 
+                
+                // Save changes button
                 GradientButtonBackground(buttonText: "Save Settings") {
                     print("save changes made by the user")
+                    generator.selectionChanged()
                     #warning("no button action")
                 }
                 
@@ -58,6 +100,9 @@ struct SettingsView: View {
             .frame(maxHeight: .infinity)
             .padding(.horizontal, 20)
             .padding(.top, 20)
+        }
+        .sheet(isPresented: $showImagePicker) {
+            ImagePicker(image: $inputImage)
         }
         .preferredColorScheme(.dark)
     }

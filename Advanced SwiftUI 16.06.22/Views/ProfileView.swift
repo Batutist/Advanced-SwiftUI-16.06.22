@@ -76,7 +76,7 @@ struct ProfileView: View {
                         print("settings button pressed")
                         showSettingsView.toggle()
                     } label: {
-                        TextfieldIcon(isActive: .constant(true), icon: "gearshape.fill")
+                        TextfieldIcon(isActive: .constant(true), icon: "gearshape.fill", passedImage: .constant(nil))
                     }
                 }
                 

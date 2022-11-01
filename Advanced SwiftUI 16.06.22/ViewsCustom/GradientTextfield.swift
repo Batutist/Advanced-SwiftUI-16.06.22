@@ -22,7 +22,7 @@ struct GradientTextfield: View {
     
     var body: some View {
         HStack(spacing: 12) {
-            TextfieldIcon(isActive: $isTextfieldActive, icon: textfieldIcon)
+            TextfieldIcon(isActive: $isTextfieldActive, icon: textfieldIcon, passedImage: .constant(nil))
                 .padding(.leading, 8)
                 .scaleEffect(textfieldIconBounce ? 1.2 : 1)
             

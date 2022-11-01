@@ -10,6 +10,7 @@ import SwiftUI
 struct TextfieldIcon: View {
     @Binding var isActive: Bool
     var icon: String
+    @Binding var passedImage: UIImage?
     
     var gradientColors: [Color] = [
         Color(red: 101/255, green: 134/255, blue: 1),
@@ -44,9 +45,17 @@ struct TextfieldIcon: View {
                     .stroke(.white)
                     .blendMode(.overlay)
                 
-                Image(systemName: icon)
-                    .gradientForegroundText(colors: [Color("pink-gradient-1"), Color("pink-gradient-2")])
-                    .font(.headline)
+                if let image = passedImage {
+                    Image(uiImage: image)
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 28, height: 28, alignment: .center)
+                        .cornerRadius(8)
+                } else {
+                    Image(systemName: icon)
+                        .gradientForegroundText(colors: [Color("pink-gradient-1"), Color("pink-gradient-2")])
+                        .font(.headline)
+                }
             }
         )
         .frame(width: 36, height: 36, alignment: .center)
@@ -56,6 +65,6 @@ struct TextfieldIcon: View {
 
 struct TextfieldIcon_Previews: PreviewProvider {
     static var previews: some View {
-        TextfieldIcon(isActive: .constant(true), icon: "key.fill")
+        TextfieldIcon(isActive: .constant(true), icon: "key.fill", passedImage: .constant(nil))
     }
 }

@@ -204,7 +204,7 @@ struct SignUpCard: View {
     //MARK: - Email textfield
     private var emailTextField: some View {
         HStack(spacing: 12) {
-            TextfieldIcon(isActive: $isEmailActive, icon: "envelope.fill")
+            TextfieldIcon(isActive: $isEmailActive, icon: "envelope.fill", passedImage: .constant(nil))
                 .padding(.leading, 8)
                 .scaleEffect(emailIconBounce ? 1.2 : 1)
             
@@ -239,7 +239,7 @@ struct SignUpCard: View {
     //MARK: - Password textfield
     private var passwordTextField: some View {
         HStack(spacing: 12) {
-            TextfieldIcon(isActive: $isPasswordActive, icon: "key.fill")
+            TextfieldIcon(isActive: $isPasswordActive, icon: "key.fill", passedImage: .constant(nil))
                 .padding(.leading, 8)
                 .scaleEffect(passwordIconBounce ? 1.2 : 1.0)
             
